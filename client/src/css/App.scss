@@ -1,0 +1,49 @@
+@import "base";
+@import "mixins";
+
+/*-----| HTML, Body |-----*/
+html{font-size: 14px; color:$textColor; line-height: 1.5;}
+.container{width: 95%;}
+
+
+/*-----| Header |-----*/
+header{ display: flex;  justify-content: space-between;
+    align-items: center;  padding: 10px 20px; background:$headerBG;
+        .logo{      
+            a{
+                display: block; padding: 10px 15px; font-size: 1.5rem;
+                color:$whiteText;
+            }
+        }
+    
+        nav{
+            ul{display: flex; margin:0;
+                li{margin:0 10px;
+                  a{ display: block; padding:5px 10px; color:$navColor;                     
+                      &:hover, &.active{ color:$whiteText;} 
+                  }               
+                }
+            }
+        }
+}
+
+/*-----| Main |-----*/
+.main{height: calc(100vh - 105px);}
+.pageHeader{background:$bgColor2; padding: 15px 0;
+    .container{
+        display: flex; justify-content: space-between;
+    }
+}
+.content{padding: 15px 0;}
+.contentWrap{padding: 10px; background-color: $bgColor2; margin: 15px 0;
+    @include clearfix;}
+
+
+/*-----| Card |-----*/
+.card{margin:0 0 15px;
+    .card-header{font-size: 1.5rem; color:$CardHeader}
+    .card-footer{font-size: 1.3rem; color:$CardFoot; display: flex; justify-content: space-between;}
+}
+
+
+
